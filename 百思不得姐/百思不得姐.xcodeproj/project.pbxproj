@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		DBA6B0D71CFA722300B47BFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0D61CFA722300B47BFE /* main.m */; };
 		DBA6B0DA1CFA722300B47BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0D91CFA722300B47BFE /* AppDelegate.m */; };
-		DBA6B0DD1CFA722300B47BFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0DC1CFA722300B47BFE /* ViewController.m */; };
 		DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0DE1CFA722300B47BFE /* Main.storyboard */; };
 		DBA6B0E21CFA722300B47BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E11CFA722300B47BFE /* Assets.xcassets */; };
 		DBA6B0E51CFA722300B47BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */; };
 		DBA6B0F01CFA722400B47BFE /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0EF1CFA722400B47BFE /* _____Tests.m */; };
 		DBA6B0FB1CFA722400B47BFE /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0FA1CFA722400B47BFE /* _____UITests.m */; };
+		DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		DBA6B0D61CFA722300B47BFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA6B0D81CFA722300B47BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		DBA6B0D91CFA722300B47BFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		DBA6B0DB1CFA722300B47BFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		DBA6B0DC1CFA722300B47BFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		DBA6B0DF1CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA6B0E11CFA722300B47BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA6B0E41CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		DBA6B0F61CFA722400B47BFE /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA6B0FA1CFA722400B47BFE /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		DBA6B0FC1CFA722400B47BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
+		DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +141,8 @@
 		DBA6B1081CFA726800B47BFE /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				DBA6B0DB1CFA722300B47BFE /* ViewController.h */,
-				DBA6B0DC1CFA722300B47BFE /* ViewController.m */,
+				DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */,
+				DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -218,6 +218,7 @@
 		DBA6B0CA1CFA722300B47BFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JL;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = kongfz;
 				TargetAttributes = {
@@ -286,9 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA6B0DD1CFA722300B47BFE /* ViewController.m in Sources */,
 				DBA6B0DA1CFA722300B47BFE /* AppDelegate.m in Sources */,
 				DBA6B0D71CFA722300B47BFE /* main.m in Sources */,
+				DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

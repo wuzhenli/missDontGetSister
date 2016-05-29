@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JLTabBarController.h
 //  百思不得姐
 //
 //  Created by kfz on 16/5/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface JLTabBarController : UITabBarController
 
 @end
-
