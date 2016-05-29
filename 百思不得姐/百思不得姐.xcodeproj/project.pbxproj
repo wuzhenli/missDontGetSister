@@ -15,6 +15,10 @@
 		DBA6B0F01CFA722400B47BFE /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0EF1CFA722400B47BFE /* _____Tests.m */; };
 		DBA6B0FB1CFA722400B47BFE /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0FA1CFA722400B47BFE /* _____UITests.m */; };
 		DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */; };
+		DBA6B1121CFA84B500B47BFE /* JLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */; };
+		DBA6B1151CFA84BE00B47BFE /* JLNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */; };
+		DBA6B1181CFA84D900B47BFE /* JLTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */; };
+		DBA6B11B1CFA84E200B47BFE /* JLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		DBA6B0FC1CFA722400B47BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
 		DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
+		DBA6B1101CFA84B500B47BFE /* JLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLEssenceViewController.h; sourceTree = "<group>"; };
+		DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLEssenceViewController.m; sourceTree = "<group>"; };
+		DBA6B1131CFA84BE00B47BFE /* JLNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNewViewController.h; sourceTree = "<group>"; };
+		DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNewViewController.m; sourceTree = "<group>"; };
+		DBA6B1161CFA84D900B47BFE /* JLTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTrendViewController.h; sourceTree = "<group>"; };
+		DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTrendViewController.m; sourceTree = "<group>"; };
+		DBA6B1191CFA84E200B47BFE /* JLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMeViewController.h; sourceTree = "<group>"; };
+		DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,14 @@
 			children = (
 				DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */,
 				DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */,
+				DBA6B1101CFA84B500B47BFE /* JLEssenceViewController.h */,
+				DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */,
+				DBA6B1131CFA84BE00B47BFE /* JLNewViewController.h */,
+				DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */,
+				DBA6B1161CFA84D900B47BFE /* JLTrendViewController.h */,
+				DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */,
+				DBA6B1191CFA84E200B47BFE /* JLMeViewController.h */,
+				DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -289,7 +309,11 @@
 			files = (
 				DBA6B0DA1CFA722300B47BFE /* AppDelegate.m in Sources */,
 				DBA6B0D71CFA722300B47BFE /* main.m in Sources */,
+				DBA6B1151CFA84BE00B47BFE /* JLNewViewController.m in Sources */,
+				DBA6B11B1CFA84E200B47BFE /* JLMeViewController.m in Sources */,
 				DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */,
+				DBA6B1181CFA84D900B47BFE /* JLTrendViewController.m in Sources */,
+				DBA6B1121CFA84B500B47BFE /* JLEssenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

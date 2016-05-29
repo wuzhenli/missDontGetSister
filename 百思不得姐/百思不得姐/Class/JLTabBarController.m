@@ -7,6 +7,11 @@
 //
 
 #import "JLTabBarController.h"
+#import "JLEssenceViewController.h"
+#import "JLNewViewController.h"
+#import "JLTrendViewController.h"
+#import "JLMeViewController.h"
+
 
 @interface JLTabBarController ()
 
@@ -34,15 +39,15 @@
     self.tabBar.tintColor = [UIColor darkGrayColor];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self addChildVCTitle:@"精华" image:@"tabBar_essence_icon" selImage:@"tabBar_essence_click_icon"];
-    [self addChildVCTitle:@"新帖" image:@"tabBar_new_icon" selImage:@"tabBar_new_click_icon"];
-    [self addChildVCTitle:@"关注" image:@"tabBar_friendTrends_icon" selImage:@"tabBar_friendTrends_click_icon"];
-    [self addChildVCTitle:@"我" image:@"tabBar_me_icon" selImage:@"tabBar_me_click_icon"];
+    [self addChildVC:@"JLEssenceViewController" title:@"精华" image:@"tabBar_essence_icon" selImage:@"tabBar_essence_click_icon"];
+    [self addChildVC:@"JLNewViewController" title:@"新帖" image:@"tabBar_new_icon" selImage:@"tabBar_new_click_icon"];
+    [self addChildVC:@"JLTrendViewController" title:@"关注" image:@"tabBar_friendTrends_icon" selImage:@"tabBar_friendTrends_click_icon"];
+    [self addChildVC:@"JLMeViewController" title:@"我" image:@"tabBar_me_icon" selImage:@"tabBar_me_click_icon"];
 }
 
 
-- (void)addChildVCTitle:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage {
-    UIViewController *vc1 = [[UIViewController alloc] init];
+- (void)addChildVC:(NSString *)vc title:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage {
+    UIViewController *vc1 = [[NSClassFromString(vc) alloc] init];
     vc1.tabBarItem.title = title;
     vc1.tabBarItem.image = [UIImage imageNamed:image];
     vc1.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
