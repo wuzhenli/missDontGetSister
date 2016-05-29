@@ -16,6 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    NSDictionary *atts = @{
+                           NSFontAttributeName : [UIFont systemFontOfSize:12],
+                           NSForegroundColorAttributeName : [UIColor grayColor]
+                           };
+    NSDictionary *attsSel = @{
+                              NSFontAttributeName : [UIFont systemFontOfSize:12],
+                              NSForegroundColorAttributeName : [UIColor darkGrayColor]
+                              };
+    [item setTitleTextAttributes:atts forState:UIControlStateNormal];
+    [item setTitleTextAttributes:attsSel forState:UIControlStateSelected];
+    
     self.tabBar.tintColor = [UIColor darkGrayColor];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -31,16 +46,6 @@
     vc1.tabBarItem.title = title;
     vc1.tabBarItem.image = [UIImage imageNamed:image];
     vc1.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
-    NSDictionary *atts = @{
-                           NSFontAttributeName : [UIFont systemFontOfSize:12],
-                           NSForegroundColorAttributeName : [UIColor grayColor]
-                           };
-    NSDictionary *attsSel = @{
-                              NSFontAttributeName : [UIFont systemFontOfSize:12],
-                              NSForegroundColorAttributeName : [UIColor darkGrayColor]
-                              };
-    [vc1.tabBarItem setTitleTextAttributes:atts forState:UIControlStateNormal];
-    [vc1.tabBarItem setTitleTextAttributes:attsSel forState:UIControlStateSelected];
     
     [self addChildViewController:vc1];
 }
