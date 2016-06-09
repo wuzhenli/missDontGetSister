@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DBA6B0D71CFA722300B47BFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0D61CFA722300B47BFE /* main.m */; };
-		DBA6B0DA1CFA722300B47BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0D91CFA722300B47BFE /* AppDelegate.m */; };
+		DB2F12471D091849005C7257 /* JLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12251D091849005C7257 /* JLEssenceViewController.m */; };
+		DB2F12481D091849005C7257 /* JLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F122B1D091849005C7257 /* JLMeViewController.m */; };
+		DB2F12491D091849005C7257 /* JLNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12311D091849005C7257 /* JLNewViewController.m */; };
+		DB2F124A1D091849005C7257 /* JLTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12371D091849005C7257 /* JLTrendViewController.m */; };
+		DB2F124B1D091849005C7257 /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F123D1D091849005C7257 /* JLTabBarController.m */; };
+		DB2F124C1D091849005C7257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12411D091849005C7257 /* AppDelegate.m */; };
+		DB2F124D1D091849005C7257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12421D091849005C7257 /* main.m */; };
+		DB2F124E1D091849005C7257 /* JLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12461D091849005C7257 /* JLTabBar.m */; };
 		DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0DE1CFA722300B47BFE /* Main.storyboard */; };
 		DBA6B0E21CFA722300B47BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E11CFA722300B47BFE /* Assets.xcassets */; };
 		DBA6B0E51CFA722300B47BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */; };
 		DBA6B0F01CFA722400B47BFE /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0EF1CFA722400B47BFE /* _____Tests.m */; };
 		DBA6B0FB1CFA722400B47BFE /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B0FA1CFA722400B47BFE /* _____UITests.m */; };
-		DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */; };
-		DBA6B1121CFA84B500B47BFE /* JLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */; };
-		DBA6B1151CFA84BE00B47BFE /* JLNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */; };
-		DBA6B1181CFA84D900B47BFE /* JLTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */; };
-		DBA6B11B1CFA84E200B47BFE /* JLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */; };
-		DBA6B11E1CFA863800B47BFE /* JLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6B11D1CFA863800B47BFE /* JLTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +40,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB2F12201D090100005C7257 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DB2F12241D091849005C7257 /* JLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLEssenceViewController.h; sourceTree = "<group>"; };
+		DB2F12251D091849005C7257 /* JLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLEssenceViewController.m; sourceTree = "<group>"; };
+		DB2F122A1D091849005C7257 /* JLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMeViewController.h; sourceTree = "<group>"; };
+		DB2F122B1D091849005C7257 /* JLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMeViewController.m; sourceTree = "<group>"; };
+		DB2F12301D091849005C7257 /* JLNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNewViewController.h; sourceTree = "<group>"; };
+		DB2F12311D091849005C7257 /* JLNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNewViewController.m; sourceTree = "<group>"; };
+		DB2F12361D091849005C7257 /* JLTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTrendViewController.h; sourceTree = "<group>"; };
+		DB2F12371D091849005C7257 /* JLTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTrendViewController.m; sourceTree = "<group>"; };
+		DB2F123C1D091849005C7257 /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
+		DB2F123D1D091849005C7257 /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
+		DB2F12401D091849005C7257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB2F12411D091849005C7257 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB2F12421D091849005C7257 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB2F12431D091849005C7257 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DB2F12451D091849005C7257 /* JLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBar.h; sourceTree = "<group>"; };
+		DB2F12461D091849005C7257 /* JLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBar.m; sourceTree = "<group>"; };
 		DBA6B0D21CFA722300B47BFE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBA6B0D61CFA722300B47BFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DBA6B0D81CFA722300B47BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		DBA6B0D91CFA722300B47BFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		DBA6B0DF1CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA6B0E11CFA722300B47BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA6B0E41CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,18 +67,6 @@
 		DBA6B0F61CFA722400B47BFE /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA6B0FA1CFA722400B47BFE /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		DBA6B0FC1CFA722400B47BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
-		DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
-		DBA6B1101CFA84B500B47BFE /* JLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLEssenceViewController.h; sourceTree = "<group>"; };
-		DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLEssenceViewController.m; sourceTree = "<group>"; };
-		DBA6B1131CFA84BE00B47BFE /* JLNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNewViewController.h; sourceTree = "<group>"; };
-		DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNewViewController.m; sourceTree = "<group>"; };
-		DBA6B1161CFA84D900B47BFE /* JLTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTrendViewController.h; sourceTree = "<group>"; };
-		DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTrendViewController.m; sourceTree = "<group>"; };
-		DBA6B1191CFA84E200B47BFE /* JLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMeViewController.h; sourceTree = "<group>"; };
-		DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMeViewController.m; sourceTree = "<group>"; };
-		DBA6B11C1CFA863800B47BFE /* JLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBar.h; sourceTree = "<group>"; };
-		DBA6B11D1CFA863800B47BFE /* JLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +94,196 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2F12211D091849005C7257 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12221D091849005C7257 /* Essence-精华 */,
+				DB2F12281D091849005C7257 /* Me-我 */,
+				DB2F122E1D091849005C7257 /* New-新帖 */,
+				DB2F12341D091849005C7257 /* Trend-关注 */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		DB2F12221D091849005C7257 /* Essence-精华 */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12231D091849005C7257 /* Controllers */,
+				DB2F12261D091849005C7257 /* Models */,
+				DB2F12271D091849005C7257 /* Views */,
+			);
+			path = "Essence-精华";
+			sourceTree = "<group>";
+		};
+		DB2F12231D091849005C7257 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12241D091849005C7257 /* JLEssenceViewController.h */,
+				DB2F12251D091849005C7257 /* JLEssenceViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2F12261D091849005C7257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB2F12271D091849005C7257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB2F12281D091849005C7257 /* Me-我 */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12291D091849005C7257 /* Controllers */,
+				DB2F122C1D091849005C7257 /* Models */,
+				DB2F122D1D091849005C7257 /* Views */,
+			);
+			path = "Me-我";
+			sourceTree = "<group>";
+		};
+		DB2F12291D091849005C7257 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F122A1D091849005C7257 /* JLMeViewController.h */,
+				DB2F122B1D091849005C7257 /* JLMeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2F122C1D091849005C7257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB2F122D1D091849005C7257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB2F122E1D091849005C7257 /* New-新帖 */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F122F1D091849005C7257 /* Controllers */,
+				DB2F12321D091849005C7257 /* Models */,
+				DB2F12331D091849005C7257 /* Views */,
+			);
+			path = "New-新帖";
+			sourceTree = "<group>";
+		};
+		DB2F122F1D091849005C7257 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12301D091849005C7257 /* JLNewViewController.h */,
+				DB2F12311D091849005C7257 /* JLNewViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2F12321D091849005C7257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB2F12331D091849005C7257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB2F12341D091849005C7257 /* Trend-关注 */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12351D091849005C7257 /* Controllers */,
+				DB2F12381D091849005C7257 /* Models */,
+				DB2F12391D091849005C7257 /* Views */,
+			);
+			path = "Trend-关注";
+			sourceTree = "<group>";
+		};
+		DB2F12351D091849005C7257 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12361D091849005C7257 /* JLTrendViewController.h */,
+				DB2F12371D091849005C7257 /* JLTrendViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2F12381D091849005C7257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB2F12391D091849005C7257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB2F123A1D091849005C7257 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F123B1D091849005C7257 /* Conteollers */,
+				DB2F123E1D091849005C7257 /* Models */,
+				DB2F123F1D091849005C7257 /* Others */,
+				DB2F12441D091849005C7257 /* Views */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		DB2F123B1D091849005C7257 /* Conteollers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F123C1D091849005C7257 /* JLTabBarController.h */,
+				DB2F123D1D091849005C7257 /* JLTabBarController.m */,
+			);
+			path = Conteollers;
+			sourceTree = "<group>";
+		};
+		DB2F123E1D091849005C7257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB2F123F1D091849005C7257 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12401D091849005C7257 /* AppDelegate.h */,
+				DB2F12411D091849005C7257 /* AppDelegate.m */,
+				DB2F12421D091849005C7257 /* main.m */,
+				DB2F12431D091849005C7257 /* PrefixHeader.pch */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		DB2F12441D091849005C7257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F12451D091849005C7257 /* JLTabBar.h */,
+				DB2F12461D091849005C7257 /* JLTabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DBA6B0C91CFA722300B47BFE = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +307,8 @@
 		DBA6B0D41CFA722300B47BFE /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				DBA6B1081CFA726800B47BFE /* Class */,
-				DBA6B1091CFA726800B47BFE /* Others */,
+				DB2F12211D091849005C7257 /* Class */,
+				DB2F123A1D091849005C7257 /* Others */,
 				DBA6B0D51CFA722300B47BFE /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -131,7 +321,6 @@
 				DBA6B0E11CFA722300B47BFE /* Assets.xcassets */,
 				DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */,
 				DBA6B0E61CFA722300B47BFE /* Info.plist */,
-				DBA6B0D61CFA722300B47BFE /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,35 +341,6 @@
 				DBA6B0FC1CFA722400B47BFE /* Info.plist */,
 			);
 			path = "百思不得姐UITests";
-			sourceTree = "<group>";
-		};
-		DBA6B1081CFA726800B47BFE /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				DBA6B10D1CFA7B1600B47BFE /* JLTabBarController.h */,
-				DBA6B10E1CFA7B1600B47BFE /* JLTabBarController.m */,
-				DBA6B1101CFA84B500B47BFE /* JLEssenceViewController.h */,
-				DBA6B1111CFA84B500B47BFE /* JLEssenceViewController.m */,
-				DBA6B1131CFA84BE00B47BFE /* JLNewViewController.h */,
-				DBA6B1141CFA84BE00B47BFE /* JLNewViewController.m */,
-				DBA6B1161CFA84D900B47BFE /* JLTrendViewController.h */,
-				DBA6B1171CFA84D900B47BFE /* JLTrendViewController.m */,
-				DBA6B1191CFA84E200B47BFE /* JLMeViewController.h */,
-				DBA6B11A1CFA84E200B47BFE /* JLMeViewController.m */,
-				DBA6B11C1CFA863800B47BFE /* JLTabBar.h */,
-				DBA6B11D1CFA863800B47BFE /* JLTabBar.m */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		DBA6B1091CFA726800B47BFE /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				DBA6B0D81CFA722300B47BFE /* AppDelegate.h */,
-				DBA6B0D91CFA722300B47BFE /* AppDelegate.m */,
-				DB2F12201D090100005C7257 /* PrefixHeader.pch */,
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,14 +474,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA6B0DA1CFA722300B47BFE /* AppDelegate.m in Sources */,
-				DBA6B0D71CFA722300B47BFE /* main.m in Sources */,
-				DBA6B1151CFA84BE00B47BFE /* JLNewViewController.m in Sources */,
-				DBA6B11B1CFA84E200B47BFE /* JLMeViewController.m in Sources */,
-				DBA6B10F1CFA7B1600B47BFE /* JLTabBarController.m in Sources */,
-				DBA6B1181CFA84D900B47BFE /* JLTrendViewController.m in Sources */,
-				DBA6B1121CFA84B500B47BFE /* JLEssenceViewController.m in Sources */,
-				DBA6B11E1CFA863800B47BFE /* JLTabBar.m in Sources */,
+				DB2F124B1D091849005C7257 /* JLTabBarController.m in Sources */,
+				DB2F124A1D091849005C7257 /* JLTrendViewController.m in Sources */,
+				DB2F124C1D091849005C7257 /* AppDelegate.m in Sources */,
+				DB2F12491D091849005C7257 /* JLNewViewController.m in Sources */,
+				DB2F12481D091849005C7257 /* JLMeViewController.m in Sources */,
+				DB2F124D1D091849005C7257 /* main.m in Sources */,
+				DB2F12471D091849005C7257 /* JLEssenceViewController.m in Sources */,
+				DB2F124E1D091849005C7257 /* JLTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Others/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,7 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Others/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
