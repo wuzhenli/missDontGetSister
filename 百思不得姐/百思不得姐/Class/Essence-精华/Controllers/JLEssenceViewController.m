@@ -7,6 +7,7 @@
 //
 
 #import "JLEssenceViewController.h"
+#import <SVProgressHUD.h>
 
 @interface JLEssenceViewController ()
 
@@ -34,6 +35,16 @@
     UIViewController *vc = [[UIViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (IBAction)showHud:(id)sender {
+    [SVProgressHUD show];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+    });
+}
+- (IBAction)dismissHud:(id)sender {
+}
+
+
 
 @end
 
