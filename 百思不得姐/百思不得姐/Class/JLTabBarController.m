@@ -11,6 +11,7 @@
 #import "JLNewViewController.h"
 #import "JLTrendViewController.h"
 #import "JLMeViewController.h"
+#import "JLTabBar.h"
 
 
 @interface JLTabBarController ()
@@ -36,13 +37,18 @@
     [item setTitleTextAttributes:atts forState:UIControlStateNormal];
     [item setTitleTextAttributes:attsSel forState:UIControlStateSelected];
     
-    self.tabBar.tintColor = [UIColor darkGrayColor];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     
     [self addChildVC:@"JLEssenceViewController" title:@"精华" image:@"tabBar_essence_icon" selImage:@"tabBar_essence_click_icon"];
     [self addChildVC:@"JLNewViewController" title:@"新帖" image:@"tabBar_new_icon" selImage:@"tabBar_new_click_icon"];
     [self addChildVC:@"JLTrendViewController" title:@"关注" image:@"tabBar_friendTrends_icon" selImage:@"tabBar_friendTrends_click_icon"];
     [self addChildVC:@"JLMeViewController" title:@"我" image:@"tabBar_me_icon" selImage:@"tabBar_me_click_icon"];
+    
+    //  UITabBar
+    [self setValue:[[JLTabBar alloc] init] forKey:@"tabBar"];
+    
+    self.tabBar.tintColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 
