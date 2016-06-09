@@ -15,6 +15,8 @@
 		DB2F124C1D091849005C7257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12411D091849005C7257 /* AppDelegate.m */; };
 		DB2F124D1D091849005C7257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12421D091849005C7257 /* main.m */; };
 		DB2F124E1D091849005C7257 /* JLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F12461D091849005C7257 /* JLTabBar.m */; };
+		DB79323C1D0995240013CB48 /* JLNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB79323B1D0995240013CB48 /* JLNavgationController.m */; };
+		DB79323E1D099B7A0013CB48 /* JLTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB79323D1D099B7A0013CB48 /* JLTrendViewController.xib */; };
 		DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0DE1CFA722300B47BFE /* Main.storyboard */; };
 		DBA6B0E21CFA722300B47BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E11CFA722300B47BFE /* Assets.xcassets */; };
 		DBA6B0E51CFA722300B47BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */; };
@@ -56,9 +58,12 @@
 		DB2F12431D091849005C7257 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DB2F12451D091849005C7257 /* JLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBar.h; sourceTree = "<group>"; };
 		DB2F12461D091849005C7257 /* JLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBar.m; sourceTree = "<group>"; };
+		DB79323A1D0995240013CB48 /* JLNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNavgationController.h; sourceTree = "<group>"; };
+		DB79323B1D0995240013CB48 /* JLNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNavgationController.m; sourceTree = "<group>"; };
+		DB79323D1D099B7A0013CB48 /* JLTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTrendViewController.xib; sourceTree = "<group>"; };
 		DBA6B0D21CFA722300B47BFE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA6B0DF1CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBA6B0E11CFA722300B47BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBA6B0E11CFA722300B47BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		DBA6B0E41CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA6B0E61CFA722300B47BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA6B0EB1CFA722400B47BFE /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +224,7 @@
 			children = (
 				DB2F12361D091849005C7257 /* JLTrendViewController.h */,
 				DB2F12371D091849005C7257 /* JLTrendViewController.m */,
+				DB79323D1D099B7A0013CB48 /* JLTrendViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,10 +246,10 @@
 		DB2F123A1D091849005C7257 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F12441D091849005C7257 /* Views */,
 				DB2F123B1D091849005C7257 /* Conteollers */,
 				DB2F123E1D091849005C7257 /* Models */,
 				DB2F123F1D091849005C7257 /* Others */,
-				DB2F12441D091849005C7257 /* Views */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -253,6 +259,8 @@
 			children = (
 				DB2F123C1D091849005C7257 /* JLTabBarController.h */,
 				DB2F123D1D091849005C7257 /* JLTabBarController.m */,
+				DB79323A1D0995240013CB48 /* JLNavgationController.h */,
+				DB79323B1D0995240013CB48 /* JLNavgationController.m */,
 			);
 			path = Conteollers;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 				DB2F12411D091849005C7257 /* AppDelegate.m */,
 				DB2F12421D091849005C7257 /* main.m */,
 				DB2F12431D091849005C7257 /* PrefixHeader.pch */,
+				DBA6B0E11CFA722300B47BFE /* Assets.xcassets */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -318,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				DBA6B0DE1CFA722300B47BFE /* Main.storyboard */,
-				DBA6B0E11CFA722300B47BFE /* Assets.xcassets */,
 				DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */,
 				DBA6B0E61CFA722300B47BFE /* Info.plist */,
 			);
@@ -447,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB79323E1D099B7A0013CB48 /* JLTrendViewController.xib in Resources */,
 				DBA6B0E51CFA722300B47BFE /* LaunchScreen.storyboard in Resources */,
 				DBA6B0E21CFA722300B47BFE /* Assets.xcassets in Resources */,
 				DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */,
@@ -479,6 +488,7 @@
 				DB2F124C1D091849005C7257 /* AppDelegate.m in Sources */,
 				DB2F12491D091849005C7257 /* JLNewViewController.m in Sources */,
 				DB2F12481D091849005C7257 /* JLMeViewController.m in Sources */,
+				DB79323C1D0995240013CB48 /* JLNavgationController.m in Sources */,
 				DB2F124D1D091849005C7257 /* main.m in Sources */,
 				DB2F12471D091849005C7257 /* JLEssenceViewController.m in Sources */,
 				DB2F124E1D091849005C7257 /* JLTabBar.m in Sources */,

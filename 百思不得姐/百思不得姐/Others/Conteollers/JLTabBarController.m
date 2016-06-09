@@ -12,6 +12,7 @@
 #import "JLTrendViewController.h"
 #import "JLMeViewController.h"
 #import "JLTabBar.h"
+#import "JLNavgationController.h"
 
 
 @interface JLTabBarController ()
@@ -58,7 +59,7 @@
     vc1.tabBarItem.image = [UIImage imageNamed:image];
     vc1.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc1];
+    JLNavgationController *nav = [[JLNavgationController alloc] initWithRootViewController:vc1];
     
     [self addChildViewController:nav];
 }
