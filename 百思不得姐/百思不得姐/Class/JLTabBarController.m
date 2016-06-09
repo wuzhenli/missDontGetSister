@@ -58,7 +58,9 @@
     vc1.tabBarItem.image = [UIImage imageNamed:image];
     vc1.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
     
-    [self addChildViewController:vc1];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc1];
+    
+    [self addChildViewController:nav];
 }
 
 @end
