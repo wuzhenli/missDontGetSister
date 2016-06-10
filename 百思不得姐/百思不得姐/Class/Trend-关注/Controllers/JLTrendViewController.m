@@ -7,6 +7,7 @@
 //  
 
 #import "JLTrendViewController.h"
+#import "JLRecomendViewController.h"
 
 @interface JLTrendViewController ()
 
@@ -23,11 +24,17 @@
     self.navigationItem.title = @"我的关注";
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(friendClicked) forControlEvents:UIControlEventTouchUpInside];
     [btn setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
     [btn setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
     btn.bounds = (CGRect){{0, 0}, btn.currentBackgroundImage.size};
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
+- (void)friendClicked {
+    JLRecomendViewController *vc = [[JLRecomendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
