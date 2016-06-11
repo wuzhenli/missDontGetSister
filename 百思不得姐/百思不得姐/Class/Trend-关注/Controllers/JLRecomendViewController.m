@@ -13,6 +13,7 @@
 #import "JLRecomendCell.h"
 #import "JLUser.h"
 #import "JLUserCell.h"
+#import <MJRefresh.h>
 
 
 @interface JLRecomendViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *categoryView;
 @property (weak, nonatomic) IBOutlet UITableView *userView;
 
+@property (assign, nonatomic) NSUInteger categoryIndex;
 
 @end
 
@@ -36,6 +38,14 @@ static NSString *userID = @"user_cell";
     [super viewDidLoad];
     
     [self setUp];
+    [self addRefresh];
+}
+
+- (void)addRefresh {
+    self.userView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(userRefresh)];
+    [self.userView.mj_header beginRefreshing];
+    
+    self.userView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(userLoadMore)];
 }
 
 - (void)setUp {
@@ -48,6 +58,7 @@ static NSString *userID = @"user_cell";
     [self.userView registerNib:[UINib nibWithNibName:@"JLUserCell" bundle:nil] forCellReuseIdentifier:userID];
     
     [SVProgressHUD showWithStatus:@"loading"];
+    
     [JLNetTool getRecomendCategorySuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         self.categoryList = [JLRecomendList mj_objectArrayWithKeyValuesArray:responseObject[@"list"] context:nil];
@@ -71,7 +82,7 @@ static NSString *userID = @"user_cell";
     if (tableView == self.categoryView) {
         return self.categoryList.count;
     }else if (tableView == self.userView) {
-        return self.userList.count;
+        return self.categoryList[self.categoryIndex].users.count;
     }
     return 0;
 }
@@ -82,8 +93,10 @@ static NSString *userID = @"user_cell";
         cell = [tableView dequeueReusableCellWithIdentifier:recomendID];
         ((JLRecomendCell *)cell).model = self.categoryList[indexPath.row];
     } if (tableView == self.userView) {
+        NSLog(@"------categoryIndex:%ld  indexPath.row:%ld",self.categoryIndex, indexPath.row);
         cell = [tableView dequeueReusableCellWithIdentifier:userID];
-        ((JLUserCell *)cell).model = self.userList[indexPath.row];
+//        NSLog(@"indexPath.row:%ld--users.count:%ld",indexPath.row,self.categoryList[self.categoryIndex].users.count);
+        ((JLUserCell *)cell).model = self.categoryList[self.categoryIndex].users[indexPath.row];
     }
 
     return cell;
@@ -91,21 +104,59 @@ static NSString *userID = @"user_cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.categoryView) {
-        JLRecomendList *list = self.categoryList[indexPath.row];
-        [JLNetTool getRecomendUserListId:list.ID  Success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            self.userList = [JLUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"] context:nil];
+        self.categoryIndex = indexPath.row;
+        if ( self.categoryList[indexPath.row].users.count ) {
             [self.userView reloadData];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            ;
-        }];
+            return;
+        }
+        
+        [self .userView.mj_header beginRefreshing];
     } if (tableView == self.userView) {
         
     }
-    
-    
 }
 
 
+
+#pragma -mark 刷新控件-方法
+/**
+ * 下拉刷新
+ */
+- (void)userRefresh {
+    JLRecomendList *list = self.categoryList[self.categoryIndex];
+    [JLNetTool getRecomendUserListId:list.ID page:1  Success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        list.users = [JLUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"] context:nil];
+        list.totalPage = [responseObject[@"total_page"] integerValue];
+        list.nextPage = [responseObject[@"next_page"] integerValue];
+        
+        [self.userView reloadData];
+        [self.userView.mj_header endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.userView.mj_header endRefreshing];
+    }];
+}
+
+/**
+ * 上拉加载更多
+ */
+- (void)userLoadMore {
+    JLRecomendList *list = self.categoryList[self.categoryIndex];
+    if (list.nextPage > list.totalPage) {
+        [self.userView.mj_footer endRefreshing];
+        return;
+    }
+
+    [JLNetTool getRecomendUserListId:list.ID page:list.nextPage++  Success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSMutableArray *users = [JLUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"] context:nil];
+        list.totalPage = [responseObject[@"total_page"] integerValue];
+        
+        [list.users addObjectsFromArray:users];
+        [self.userView reloadData];
+        [self.userView.mj_footer endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.userView.mj_footer endRefreshing];
+    }];
+}
 
 @end
 

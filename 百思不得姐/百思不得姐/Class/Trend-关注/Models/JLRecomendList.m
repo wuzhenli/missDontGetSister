@@ -11,6 +11,19 @@
 
 @implementation JLRecomendList
 
+- (NSMutableArray<JLUser *> *)users {
+    if (!_users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
+
+- (NSUInteger)nextPage {
+    if (_nextPage == 0) {
+        _nextPage = 1;
+    }
+    return _nextPage;
+}
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{ // 字典中的key是属性名，value是从字典中取值用的key
              @"ID" : @"id"

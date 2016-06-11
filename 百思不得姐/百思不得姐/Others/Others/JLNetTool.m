@@ -15,12 +15,13 @@
 /**
  * 推荐关注-用户列表
  */
-+ (void)getRecomendUserListId:(NSInteger)ID Success:(Success _Nonnull)success failure:(Failure _Nonnull)failure {
++ (void)getRecomendUserListId:(NSInteger)ID page:(NSInteger)page Success:(Success _Nonnull)success failure:(Failure _Nonnull)failure {
     NSString *urlString = @"http://api.budejie.com/api/api_open.php";
     NSDictionary *params = @{
                              @"a" : @"list",
                              @"c" : @"subscribe",
-                             @"category_id" : @(ID)
+                             @"category_id" : @(ID),
+                             @"page" : @(page)
                              };
     [self get:urlString params:params success:success failure:failure];
     

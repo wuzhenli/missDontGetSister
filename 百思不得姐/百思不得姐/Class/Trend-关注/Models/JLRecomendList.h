@@ -7,8 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JLUser.h"
+
 
 @interface JLRecomendList : NSObject
+
+@property (strong, nonatomic) NSMutableArray <JLUser *>*users;
+@property (assign, nonatomic) NSUInteger totalPage;
+@property (assign, nonatomic) NSUInteger nextPage;
+
+
 
 @property (assign, nonatomic) NSUInteger count;
 
@@ -21,6 +29,10 @@
 //    id = 16;
 //    name = "\U539f\U521b";
 //}
+
+//"next_page" = 2;
+//total = 39;
+//"total_page" = 2;
 
 
 @end

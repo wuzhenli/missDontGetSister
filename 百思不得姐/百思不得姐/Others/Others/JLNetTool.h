@@ -16,7 +16,7 @@ typedef void(^Failure)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull
 /**
  * 推荐关注-用户列表
  */
-+ (void)getRecomendUserListId:(NSInteger)ID Success:(Success _Nonnull)success failure:(Failure _Nonnull)failure ;
++ (void)getRecomendUserListId:(NSInteger)ID page:(NSInteger)page Success:(Success _Nonnull)success failure:(Failure _Nonnull)failure ;
 
 /**
  * 推荐关注-左边列表
