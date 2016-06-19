@@ -16,6 +16,8 @@
 #define RECOMEND @"http://api.budejie.com/api/api_open.php"
 
 
+#define SC_Width [UIScreen mainScreen].bounds.size.width
+#define SC_Size [UIScreen mainScreen].bounds.size
 
 
 
