@@ -24,7 +24,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - MJExtension (~> 3.0.10)
-  - MJRefresh (~> 3.1.1)
+  - MJRefresh
   - SDWebImage
   - SVProgressHUD
 

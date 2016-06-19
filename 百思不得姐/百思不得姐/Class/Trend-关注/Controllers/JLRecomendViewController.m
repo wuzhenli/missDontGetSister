@@ -42,10 +42,10 @@ static NSString *userID = @"user_cell";
 }
 
 - (void)addRefresh {
-    self.userView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(userRefresh)];
-    [self.userView.mj_header beginRefreshing];
+    self.userView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(userRefresh)];
+    [self.userView.header beginRefreshing];
     
-    self.userView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(userLoadMore)];
+    self.userView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(userLoadMore)];
 }
 
 - (void)setUp {
@@ -93,9 +93,9 @@ static NSString *userID = @"user_cell";
         cell = [tableView dequeueReusableCellWithIdentifier:recomendID];
         ((JLRecomendCell *)cell).model = self.categoryList[indexPath.row];
     } if (tableView == self.userView) {
-        NSLog(@"------categoryIndex:%ld  indexPath.row:%ld",self.categoryIndex, indexPath.row);
+//        NSLog(@"------categoryIndex:%ld  indexPath.row:%ld",self.categoryIndex, indexPath.row);
         cell = [tableView dequeueReusableCellWithIdentifier:userID];
-//        NSLog(@"indexPath.row:%ld--users.count:%ld",indexPath.row,self.categoryList[self.categoryIndex].users.count);
+        NSLog(@"indexPath.row:%ld--users.count:%ld",indexPath.row,self.categoryList[self.categoryIndex].users.count);
         ((JLUserCell *)cell).model = self.categoryList[self.categoryIndex].users[indexPath.row];
     }
 
@@ -109,8 +109,9 @@ static NSString *userID = @"user_cell";
             [self.userView reloadData];
             return;
         }
-        
-        [self .userView.mj_header beginRefreshing];
+        // 赶紧刷新表格,目的是: 马上显示当前category的用户数据, 不让用户看见上一个category的残留数据
+        [self.userView reloadData];
+        [self .userView.header beginRefreshing];
     } if (tableView == self.userView) {
         
     }
@@ -129,10 +130,10 @@ static NSString *userID = @"user_cell";
         list.totalPage = [responseObject[@"total_page"] integerValue];
         list.nextPage = [responseObject[@"next_page"] integerValue];
         
+        [self.userView.header endRefreshing];
         [self.userView reloadData];
-        [self.userView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self.userView.mj_header endRefreshing];
+        [self.userView.header endRefreshing];
     }];
 }
 
@@ -142,7 +143,7 @@ static NSString *userID = @"user_cell";
 - (void)userLoadMore {
     JLRecomendList *list = self.categoryList[self.categoryIndex];
     if (list.nextPage > list.totalPage) {
-        [self.userView.mj_footer endRefreshing];
+        [self.userView.footer endRefreshing];
         return;
     }
 
@@ -152,9 +153,9 @@ static NSString *userID = @"user_cell";
         
         [list.users addObjectsFromArray:users];
         [self.userView reloadData];
-        [self.userView.mj_footer endRefreshing];
+        [self.userView.footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self.userView.mj_footer endRefreshing];
+        [self.userView.footer endRefreshing];
     }];
 }
 

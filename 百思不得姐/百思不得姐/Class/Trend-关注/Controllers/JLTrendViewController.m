@@ -8,6 +8,7 @@
 
 #import "JLTrendViewController.h"
 #import "JLRecomendViewController.h"
+#import "JLLoginViewController.h"
 
 @interface JLTrendViewController ()
 
@@ -36,6 +37,12 @@
     JLRecomendViewController *vc = [[JLRecomendViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (IBAction)registerOrLogin:(UIButton *)sender {
+    JLLoginViewController *vc = [[JLLoginViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 
 @end
 

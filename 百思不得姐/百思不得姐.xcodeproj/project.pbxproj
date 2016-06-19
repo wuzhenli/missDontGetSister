@@ -19,6 +19,8 @@
 		DB79323C1D0995240013CB48 /* JLNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB79323B1D0995240013CB48 /* JLNavgationController.m */; };
 		DB79323E1D099B7A0013CB48 /* JLTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB79323D1D099B7A0013CB48 /* JLTrendViewController.xib */; };
 		DB7932401D09A4900013CB48 /* JLEssenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB79323F1D09A4900013CB48 /* JLEssenceViewController.xib */; };
+		DB80180D1D162B19003ED873 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB80180B1D162B19003ED873 /* JLLoginViewController.m */; };
+		DB80180E1D162B19003ED873 /* JLLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB80180C1D162B19003ED873 /* JLLoginViewController.xib */; };
 		DB8392D01D0A52540089FF75 /* JLRecomendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8392CE1D0A52540089FF75 /* JLRecomendViewController.m */; };
 		DB8392D11D0A52540089FF75 /* JLRecomendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8392CF1D0A52540089FF75 /* JLRecomendViewController.xib */; };
 		DB8392D41D0A52FC0089FF75 /* JLNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8392D31D0A52FC0089FF75 /* JLNetTool.m */; };
@@ -75,6 +77,9 @@
 		DB79323B1D0995240013CB48 /* JLNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNavgationController.m; sourceTree = "<group>"; };
 		DB79323D1D099B7A0013CB48 /* JLTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTrendViewController.xib; sourceTree = "<group>"; };
 		DB79323F1D09A4900013CB48 /* JLEssenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLEssenceViewController.xib; sourceTree = "<group>"; };
+		DB80180A1D162B19003ED873 /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
+		DB80180B1D162B19003ED873 /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
+		DB80180C1D162B19003ED873 /* JLLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLoginViewController.xib; sourceTree = "<group>"; };
 		DB8392CD1D0A52540089FF75 /* JLRecomendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRecomendViewController.h; sourceTree = "<group>"; };
 		DB8392CE1D0A52540089FF75 /* JLRecomendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRecomendViewController.m; sourceTree = "<group>"; };
 		DB8392CF1D0A52540089FF75 /* JLRecomendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLRecomendViewController.xib; sourceTree = "<group>"; };
@@ -277,6 +282,9 @@
 				DB8392CD1D0A52540089FF75 /* JLRecomendViewController.h */,
 				DB8392CE1D0A52540089FF75 /* JLRecomendViewController.m */,
 				DB8392CF1D0A52540089FF75 /* JLRecomendViewController.xib */,
+				DB80180A1D162B19003ED873 /* JLLoginViewController.h */,
+				DB80180B1D162B19003ED873 /* JLLoginViewController.m */,
+				DB80180C1D162B19003ED873 /* JLLoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -532,6 +540,7 @@
 				DB7932401D09A4900013CB48 /* JLEssenceViewController.xib in Resources */,
 				DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */,
 				DB8392DC1D0A5B950089FF75 /* JLRecomendCell.xib in Resources */,
+				DB80180E1D162B19003ED873 /* JLLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB80180D1D162B19003ED873 /* JLLoginViewController.m in Sources */,
 				DB2F124B1D091849005C7257 /* JLTabBarController.m in Sources */,
 				DB8392D41D0A52FC0089FF75 /* JLNetTool.m in Sources */,
 				DB8392DF1D0A6D490089FF75 /* JLUser.m in Sources */,
