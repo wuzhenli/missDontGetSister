@@ -31,7 +31,9 @@
         
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        [btn addTarget:viewController action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+        if ([viewController respondsToSelector:@selector(back)]) {
+            [btn addTarget:viewController action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+        }
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         btn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         

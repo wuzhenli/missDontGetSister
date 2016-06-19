@@ -10,14 +10,35 @@
 #import <SVProgressHUD.h>
 
 @interface JLEssenceViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *titleView;
+@property (weak, nonatomic) IBOutlet UIView *indicatorBar;
 
 @end
 
 @implementation JLEssenceViewController
 
+- (instancetype)initWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle {
+    NSString *className = NSStringFromClass([self class]);
+    if (self = [super initWithNibName:className bundle:nibBundle]) {
+        ;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle];
+    
+    [self setup];
+}
+
+- (void)setup {
+    CGRect rect = [UIScreen mainScreen].bounds;
+    NSLog(@"%@",NSStringFromCGRect(rect));
+    rect = self.view.frame;
+    
+    NSLog(@"%@",NSStringFromCGRect(rect));
 }
 
 - (void)setTitle {
@@ -34,14 +55,6 @@
 - (void)leftBarClicked {
     UIViewController *vc = [[UIViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-}
-- (IBAction)showHud:(id)sender {
-    [SVProgressHUD show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD dismiss];
-    });
-}
-- (IBAction)dismissHud:(id)sender {
 }
 
 

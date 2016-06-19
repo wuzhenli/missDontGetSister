@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLEssenceViewController">
             <connections>
+                <outlet property="contentView" destination="P3e-ef-MjP" id="77N-R1-jBG"/>
+                <outlet property="indicatorBar" destination="nru-bC-zjW" id="4P2-uA-b5v"/>
+                <outlet property="titleView" destination="DoD-zK-YBl" id="Gua-Dx-ksX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Pcw-nx-8qe"/>
             </connections>
         </placeholder>
@@ -15,36 +18,34 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2u-U0-Ip8">
-                    <rect key="frame" x="100" y="177" width="46" height="30"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3e-ef-MjP" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="45" width="600" height="555"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoD-zK-YBl" userLabel="titleView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nru-bC-zjW" userLabel="indicatorBar">
+                            <rect key="frame" x="10" y="10" width="65" height="17"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.74587905399999999" green="0.95654041229999998" blue="0.75030901709999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="cBy-Du-fEc"/>
-                        <constraint firstAttribute="height" constant="30" id="m3u-NB-FtZ"/>
+                        <constraint firstAttribute="height" constant="45" id="NLA-Ol-GvQ"/>
                     </constraints>
-                    <state key="normal" title="show"/>
-                    <connections>
-                        <action selector="showHud:" destination="-1" eventType="touchUpInside" id="ZI0-d5-icd"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-Aq-oBn">
-                    <rect key="frame" x="185" y="177" width="94" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="94" id="LbL-bk-yGV"/>
-                        <constraint firstAttribute="height" constant="30" id="geT-0J-nfl"/>
-                    </constraints>
-                    <state key="normal" title="dismiss"/>
-                    <connections>
-                        <action selector="dismissHud:" destination="-1" eventType="touchUpInside" id="Dp7-Gr-9Tb"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="e2u-U0-Ip8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="FFZ-pW-Wa2"/>
-                <constraint firstItem="VYE-Aq-oBn" firstAttribute="centerY" secondItem="e2u-U0-Ip8" secondAttribute="centerY" id="Gur-Rz-U3Y"/>
-                <constraint firstItem="e2u-U0-Ip8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="177" id="sPQ-bn-LBb"/>
-                <constraint firstItem="VYE-Aq-oBn" firstAttribute="leading" secondItem="e2u-U0-Ip8" secondAttribute="trailing" constant="39" id="udI-Mb-ZY7"/>
+                <constraint firstItem="P3e-ef-MjP" firstAttribute="top" secondItem="DoD-zK-YBl" secondAttribute="bottom" id="5NV-9j-G3L"/>
+                <constraint firstAttribute="trailing" secondItem="DoD-zK-YBl" secondAttribute="trailing" id="5jp-hW-WJd"/>
+                <constraint firstAttribute="trailing" secondItem="P3e-ef-MjP" secondAttribute="trailing" id="78f-Kq-dXA"/>
+                <constraint firstItem="DoD-zK-YBl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SjG-7e-f2C"/>
+                <constraint firstAttribute="bottom" secondItem="P3e-ef-MjP" secondAttribute="bottom" id="edh-RU-oHQ"/>
+                <constraint firstItem="P3e-ef-MjP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rxz-6i-uec"/>
+                <constraint firstItem="DoD-zK-YBl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wry-8s-Wnu"/>
             </constraints>
+            <point key="canvasLocation" x="454" y="414"/>
         </view>
     </objects>
 </document>
