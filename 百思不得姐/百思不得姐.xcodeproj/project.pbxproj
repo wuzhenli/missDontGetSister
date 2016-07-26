@@ -28,6 +28,8 @@
 		DB8392DB1D0A5B950089FF75 /* JLRecomendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8392D91D0A5B950089FF75 /* JLRecomendCell.m */; };
 		DB8392DC1D0A5B950089FF75 /* JLRecomendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8392DA1D0A5B950089FF75 /* JLRecomendCell.xib */; };
 		DB8392DF1D0A6D490089FF75 /* JLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8392DE1D0A6D490089FF75 /* JLUser.m */; };
+		DB9A99421D47780A003573AF /* JLLogingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9A99411D47780A003573AF /* JLLogingButton.m */; };
+		DB9A99471D477897003573AF /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9A99461D477897003573AF /* UIView+extension.m */; };
 		DBA6B0E01CFA722300B47BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0DE1CFA722300B47BFE /* Main.storyboard */; };
 		DBA6B0E21CFA722300B47BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E11CFA722300B47BFE /* Assets.xcassets */; };
 		DBA6B0E51CFA722300B47BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA6B0E31CFA722300B47BFE /* LaunchScreen.storyboard */; };
@@ -92,6 +94,10 @@
 		DB8392DA1D0A5B950089FF75 /* JLRecomendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLRecomendCell.xib; sourceTree = "<group>"; };
 		DB8392DD1D0A6D490089FF75 /* JLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUser.h; sourceTree = "<group>"; };
 		DB8392DE1D0A6D490089FF75 /* JLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUser.m; sourceTree = "<group>"; };
+		DB9A99401D47780A003573AF /* JLLogingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLogingButton.h; sourceTree = "<group>"; };
+		DB9A99411D47780A003573AF /* JLLogingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLogingButton.m; sourceTree = "<group>"; };
+		DB9A99451D477897003573AF /* UIView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extension.h"; sourceTree = "<group>"; };
+		DB9A99461D477897003573AF /* UIView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extension.m"; sourceTree = "<group>"; };
 		DBA6B0D21CFA722300B47BFE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA6B0DF1CFA722300B47BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA6B0E11CFA722300B47BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +315,8 @@
 				DBBC8FC51D0AECD10057BA70 /* JLUserCell.h */,
 				DBBC8FC61D0AECD10057BA70 /* JLUserCell.m */,
 				DBBC8FC71D0AECD10057BA70 /* JLUserCell.xib */,
+				DB9A99401D47780A003573AF /* JLLogingButton.h */,
+				DB9A99411D47780A003573AF /* JLLogingButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +324,7 @@
 		DB2F123A1D091849005C7257 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				DB9A99431D477844003573AF /* Tool */,
 				DB2F12441D091849005C7257 /* Views */,
 				DB2F123B1D091849005C7257 /* Conteollers */,
 				DB2F123E1D091849005C7257 /* Models */,
@@ -363,6 +372,15 @@
 				DB2F12461D091849005C7257 /* JLTabBar.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB9A99431D477844003573AF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DB9A99451D477897003573AF /* UIView+extension.h */,
+				DB9A99461D477897003573AF /* UIView+extension.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		DBA6B0C91CFA722300B47BFE = {
@@ -614,12 +632,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB80180D1D162B19003ED873 /* JLLoginViewController.m in Sources */,
+				DB9A99421D47780A003573AF /* JLLogingButton.m in Sources */,
 				DB2F124B1D091849005C7257 /* JLTabBarController.m in Sources */,
 				DB8392D41D0A52FC0089FF75 /* JLNetTool.m in Sources */,
 				DB8392DF1D0A6D490089FF75 /* JLUser.m in Sources */,
 				DB8392D71D0A56AD0089FF75 /* JLRecomendList.m in Sources */,
 				DB8392DB1D0A5B950089FF75 /* JLRecomendCell.m in Sources */,
 				DB2F124A1D091849005C7257 /* JLTrendViewController.m in Sources */,
+				DB9A99471D477897003573AF /* UIView+extension.m in Sources */,
 				DB2F124C1D091849005C7257 /* AppDelegate.m in Sources */,
 				DB2F12491D091849005C7257 /* JLNewViewController.m in Sources */,
 				DB2F12481D091849005C7257 /* JLMeViewController.m in Sources */,

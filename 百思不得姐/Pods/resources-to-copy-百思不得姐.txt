@@ -1,2 +1,0 @@
-/Users/dakeyang/Desktop/Demo/missDontGetSister/百思不得姐/Pods/MJRefresh/MJRefresh/MJRefresh.bundle
-/Users/dakeyang/Desktop/Demo/missDontGetSister/百思不得姐/Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle

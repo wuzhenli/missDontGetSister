@@ -11,15 +11,21 @@
 
 #import "JLNetTool.h"
 
-
 // 推荐关注
 #define RECOMEND @"http://api.budejie.com/api/api_open.php"
 
+#define RandomColor [UIColor colorWithRed:arc4random()%256/255. green:arc4random()%256/255. blue:arc4random()%256/255. alpha:1.]
 
 #define SC_Width [UIScreen mainScreen].bounds.size.width
+#define SC_Height [UIScreen mainScreen].bounds.size.height
 #define SC_Size [UIScreen mainScreen].bounds.size
 
 
+#ifdef __OBJC__
+
+#import "UIView+extension.h"
+
+#endif
 
 
 #endif /* PrefixHeader_pch */
