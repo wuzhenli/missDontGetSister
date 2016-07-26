@@ -27,6 +27,7 @@
 - (UIView *)indicatorBar {
     if (!_indicatorBar) {
         UIView *bar = [[UIView alloc] init];
+        bar.frame = CGRectMake(0, 0, 100, 2);
         bar.backgroundColor = [UIColor redColor];
         [self.titleView addSubview:bar];
         _indicatorBar = bar;
@@ -73,7 +74,7 @@
     CGFloat y = 0;
     CGFloat width = SC_Width;
     NSLog(@"%f",SC_Width);
-    CGFloat height = SC_Height - self.titleViewHeight.constant;
+    CGFloat height = SC_Height;
     for (NSUInteger i = 0; i< count; i++) {
         x = width * i;
         UIViewController *vc = [[UIViewController alloc] init];
@@ -107,15 +108,16 @@
         x = width * i;
         btn.frame = (CGRect){{x, y}, {width, height}};
         [self.titleView addSubview:btn];
+        if (i == 0) {
+            // 让按钮内部的label根据内容计算尺寸
+            [btn.titleLabel sizeToFit];
+            self.indicatorBar.width = btn.titleLabel.width;
+            self.indicatorBar.center = btn.center;
+            self.indicatorBar.y = height;
+            self.indicatorBar.centerX = btn.centerX;
+        }
     }
     self.indicatorBar.tag = titleCount;
-    
-    // indicatorBar
-    CGRect rect = (CGRect){{IndicatorBarWidth / 2., height}, {width - IndicatorBarWidth, IndicatorBarHeight}};
-    
-    self.indicatorBar.frame = rect;
-    
-    
 }
 
 - (void)leftBarClicked {
