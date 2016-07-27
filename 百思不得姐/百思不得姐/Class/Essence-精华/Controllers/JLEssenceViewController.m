@@ -12,18 +12,27 @@
 #define IndicatorBarHeight 3
 
 
-@interface JLEssenceViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *contentView;
+@interface JLEssenceViewController ()<UIScrollViewDelegate>
+@property (weak, nonatomic) UIScrollView *contentView;
 @property (weak, nonatomic) IBOutlet UIView *titleView;
 @property (weak, nonatomic) UIView *indicatorBar;
 
 /** titleView的高度 */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleViewHeight;
 
+@property (strong, nonatomic) UIButton *selectedBtn;
+
 @end
 
 @implementation JLEssenceViewController
-
+- (UIScrollView *)contentView {
+    if (!_contentView) {
+        UIScrollView *sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SC_Width, SC_Height)];
+        [self.view addSubview:sv];
+        _contentView = sv;
+    }
+    return _contentView;
+}
 - (UIView *)indicatorBar {
     if (!_indicatorBar) {
         UIView *bar = [[UIView alloc] init];
@@ -54,7 +63,9 @@
     [self setNavBar];
     [self addTitleButtons];
     [self addContentView];
-    [self addContentView];
+    
+    [self.view bringSubviewToFront:self.titleView];
+    self.contentView.delegate = self;
 }
 
 - (void)setNavBar {
@@ -101,20 +112,24 @@
     for (NSUInteger i=0; i<titleCount; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = i;
-        btn.backgroundColor = RandomColor;
+        [btn addTarget:self action:@selector(titleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+//        btn.backgroundColor = RandomColor;
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
+        [btn setTitle:titleArray[i] forState:UIControlStateDisabled];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         x = width * i;
         btn.frame = (CGRect){{x, y}, {width, height}};
         [self.titleView addSubview:btn];
         if (i == 0) {
             // 让按钮内部的label根据内容计算尺寸
             [btn.titleLabel sizeToFit];
+            btn.enabled = NO;
             self.indicatorBar.width = btn.titleLabel.width;
             self.indicatorBar.center = btn.center;
             self.indicatorBar.y = height;
             self.indicatorBar.centerX = btn.centerX;
+            self.selectedBtn = btn;
         }
     }
     self.indicatorBar.tag = titleCount;
@@ -124,8 +139,44 @@
     UIViewController *vc = [[UIViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (void)titleButtonClicked:(UIButton *)sender {
+    self.selectedBtn.enabled = YES;
+    self.selectedBtn = sender;
+    sender.enabled = NO;
+    //
+    [UIView animateWithDuration:0.3 animations:^{
+        self.indicatorBar.centerX = sender.centerX;
+        self.contentView.contentOffset = CGPointMake(sender.tag * SC_Width, 0);
+    }];
+}
 
+#pragma -mark UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // title
+    
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    
+}
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int index = (scrollView.contentOffset.x / SC_Width);
+    self.selectedBtn.enabled = YES;
+    for (UIButton *btn in self.titleView.subviews) {
+        if (btn.tag == index) {
+            self.selectedBtn = btn;
+            break;
+        }
+    }
+    self.selectedBtn.enabled = NO;
+    [UIView animateWithDuration:0.2 animations:^{
+        self.indicatorBar.centerX = self.selectedBtn.centerX;
+    }];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    
+}
 
 @end
 
